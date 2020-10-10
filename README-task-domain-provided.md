@@ -33,19 +33,19 @@ You can assume each file does not contain more than one RecordType 200 with the 
 
 Your tasks:
 1. Write a list of any questions you would have to clarify these requirements.
-a. The source of csv file? What is the time window the data file should arrive?
-b. After data parsing, where should the output be sent to (i.e. destination) ? What is the time window the output should be sent out
-c. How should the app handle exceptions /errors
-   - if the csv is missing, invalid, or with corrupted data
-   - if the first line of the data file is not 100, the last line of the data file is not 900, the meter read block does not start with 200, and/or the volume of the meter read does not start with 300 ?
-   - if duplicate NMIs found in the same file?
-   - if date format provided is incorrect?
-   - if NMI provided is not equal to 10?
-   - if the quality provided is not A or E ?
-   - if the energy unit is not KWH? 
+ * The source of csv file? What is the time window the data file should arrive?
+ * After data parsing, where should the output be sent to (i.e. destination) ? What is the time window the output should be sent out
+ * How should the app handle exceptions /errors
+   * if the csv is missing, invalid, or with corrupted data
+   * if the first line of the data file is not 100, the last line of the data file is not 900, the meter read block does not start with 200, and/or the volume of the meter read does not start with 300 ?
+   * if duplicate NMIs found in the same file?
+   * if date format provided is incorrect?
+   * if NMI provided is not equal to 10?
+   * if the quality provided is not A or E ?
+   * if the energy unit is not KWH? 
    
-d. any NMI lookup or validation required ? Validation on NMI extinct, disconnect, abolished ?
-e. On average, how many csv files to be processed per run ? The time it take on average ? With this information, you can run with the same settings to see if the app is performing or all. 
+ * any NMI lookup or validation required ? Validation on NMI extinct, disconnect, abolished ?
+ * On average, how many csv files to be processed per run ? The time it take on average ? With this information, you can run with the same settings to see if the app is performing or all. 
 
 
 2. Create a new class (e.g. SimpleNem12ParserImpl) that implements interface `SimpleNem12Parser`.
